@@ -1,9 +1,6 @@
 package jia.test;
 
-import jia.code.Z_convert;
-import jia.code.findMedian;
-import jia.code.longestPalindrome;
-import jia.code.reverse;
+import jia.code.*;
 import org.junit.Test;
 
 public class LeetCodeTest {
@@ -54,4 +51,11 @@ public class LeetCodeTest {
     }
 
 
+    @Test
+    public void isP() {
+
+        isPalindrome ispa = new isPalindrome();
+        System.out.println(ispa.isP(1234321));
+
+    }
 }
