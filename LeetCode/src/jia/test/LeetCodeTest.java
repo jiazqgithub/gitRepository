@@ -54,6 +54,7 @@ public class LeetCodeTest {
     @Test
     public void isP() {
 
+        System.out.println("test");
         isPalindrome ispa = new isPalindrome();
         System.out.println(ispa.isP(1234321));
 
