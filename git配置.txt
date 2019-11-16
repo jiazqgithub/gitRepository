@@ -1,0 +1,34 @@
+$ git config --global user.name "changyuan"
+$ git config --global user.email "1411253430@qq.com"
+
+配置ssh密钥：输入下面命令，三次回车生成ssh key
+ssh-keygen -t rsa -C "1411253430@qq.com"
+
+
+常用命令：
+git status : 查看仓库的改变情况，会有相应的提示操作出现
+git add：直接添加所有改动的文件
+git commit -m "note"  确认生成本地的版本，note是版本特点说明，自己的备注（ 提交到本地仓库 ）
+git push:  讲改动上传到github，若没有指定分支，则需要使用git push origin master （ 提交到远程仓库 ）
+git log:  查看版本更新情况
+git reset --hard x :回退到某个本地版本，x为git log中出现的hash值的前7位
+git clean -xf ：清除所有未提交的文件
+
+验证SSH公钥配置成功：
+ssh -T git@gitee.com
+
+将本地仓库与远程仓库关联起来：关联命令
+git remote add origin git@gitee.com:cy1314526/vue.git
+
+远程仓库与本地仓库合并：
+首先将远程仓库的文件同步一次到本地，否则会直接报错
+# 表示从远程master分支拉取代码与本地仓库进行合并，此时一定要保证本地文件是绿色的
+git pull --rebase origin master
+
+将本地代码推送到远程分支：
+git push -u origin master
+
+
+
+
+
